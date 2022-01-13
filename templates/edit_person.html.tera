@@ -1,0 +1,41 @@
+{% extends "base.html.tera" %}
+{% block content %}
+<div class="row">
+    <h4>Edit Person</h4>
+    <div class="twelve columns">
+        <div class="ten columns">
+            <form action="/persons/{{ person.id }}" method="post">
+                <div class="twelve columns">
+                    <input
+                            type="text"
+                            placeholder="title"
+                            name="title"
+                            id="title"
+                            value="{{ person.full_name }}"
+                            autofocus
+                            class="u-full-width"
+                    />
+                </div>
+                <div class="twelve columns">
+                    <div class="two columns">
+                        <a href="/persons">
+                            <input type="button" value="cancel" />
+                        </a>
+                    </div>
+                    <div class="eight columns"></div>
+                    <div class="two columns">
+                        <input type="submit" value="save post" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="two columns">
+            <form action="/delete/{{ post.id }}" method="post">
+                <div class="two columns">
+                    <input id="delete-button" type="submit" value="delete post" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends "base.html.tera" %} {% block content %}
+<div class="row">
+    <h4>Ajouter une personne</h4>
+    <form action="/persons" method="post">
+        <div class="twelve columns">
+            <input
+                    type="text"
+                    placeholder="entrer nom et prénom"
+                    name="full_name"
+                    id="full_name"
+                    value=""
+                    autofocus
+                    class="u-full-width"
+            />
+        </div>
+        <div class="twelve columns">
+            <div class="two columns">
+                <a href="/persons">
+                    <input type="button" value="cancel" />
+                </a>
+            </div>
+            <div class="eight columns"></div>
+            <div class="two columns">
+                <input type="submit" value="enregistrer" />
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends "base.html.tera" %}
+
+{% block content %}
+<ul>
+    {% for genre in genres %}
+    <li>
+        <h4 href="genres/{{ genre.id }}">{{ genre.name }}</h4>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

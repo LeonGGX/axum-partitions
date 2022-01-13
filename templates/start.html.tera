@@ -1,0 +1,17 @@
+{% extends "base.html.tera" %}
+{% block content %}
+<div class="w3-container">
+<p>
+    Vous disposez d'un compte utilisateur :
+    <button onclick="window.location.href='/login'">
+        Login
+    </button>
+</p>
+<p>
+    Vous n'avez pas de compte utilisateur, créez-en un :
+    <button onclick="window.location.href='/signup'">
+        Sign Up
+    </button>
+</p>
+</div>
+{% endblock %}

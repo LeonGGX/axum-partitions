@@ -1,0 +1,11 @@
+{% extends "base.html.tera" %}
+
+{% block content %}
+<ul>
+    {% for person in persons %}
+        <li>
+            <h4 href="persons/{{ person.id }}">{{ person.full_name }}</h4>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
